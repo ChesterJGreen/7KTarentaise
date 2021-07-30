@@ -11,19 +11,67 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <title>7KTarentaise</title>
 </head>
+<style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
 
-<body>
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style>
+
+<body class="debug">
     <header>
         <nav class="justify-content-center navbar navbar-dark navbar-expand bg-danger text-light">
             <a class="navbar-brand" href="#">
-                <img src="http://www.7ktarentaise.com/files/7k-logo-gray2-2.jpg" width="550" height="175" alt=""
-                    loading="lazy">
+                <img class="border rounded shadow" src="http://www.7ktarentaise.com/files/7k-logo-gray2-2.jpg"
+                    width="550" height="175" alt="" loading="lazy">
                 <span class="ml-2"></span>
             </a>
         </nav>
     </header>
-    <main class="container">
-        <div id="app"></div>
+    <main class="container-fluid">
+        <div class="row bg-primary">
+            <div class="col-12 d-flex justify-content-around my-3 text-light">
+                <li>Home</li>
+                <li>Bulls</li>
+                <li>Gallery</li>
+                <li>About Us</li>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-8 p-0">
+                        <img src="https://images.unsplash.com/photo-1565652826343-2764790a8557?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGNhdHRsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            width="90%" height="75%">
+                    </div>
+                    <div class="col-4">
+                        <div class="card shadow rounded border border-primary">
+                            <div>
+                                <h3>
+                                    The Best Breed Around
+                                </h3>
+                                <hr>
+                                <li>-orignally from France</li>
+                                <li>-originally milk cows in France</li>
+                                <li>-Won Best In Breed Before</li>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="bg-dark text-light">
         <div class="text-center">
